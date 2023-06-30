@@ -15,4 +15,9 @@ describe('StringCalculator', () => {
         expect(stringCalculator.add("4")).toEqual(4);
         expect(stringCalculator.add("10")).toEqual(10);
     });
+
+    it('should return the sum of 2 comma-separated numbers', function () {
+        expect(stringCalculator.add("1,2")).toEqual(3);
+        expect(stringCalculator.add("3,4")).toEqual(7);
+    });
 })
