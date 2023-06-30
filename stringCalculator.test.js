@@ -20,4 +20,9 @@ describe('StringCalculator', () => {
         expect(stringCalculator.add("1,2")).toEqual(3);
         expect(stringCalculator.add("3,4")).toEqual(7);
     });
+
+    it('should return the sum of an arbitrary number of comma-separated numbers', function () {
+        expect(stringCalculator.add("1,2,3,4,5,6,7,8,9")).toEqual(45);
+        expect(stringCalculator.add("1,2,3,4")).toEqual(10);
+    });
 })
