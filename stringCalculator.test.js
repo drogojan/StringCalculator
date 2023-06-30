@@ -25,4 +25,9 @@ describe('StringCalculator', () => {
         expect(stringCalculator.add("1,2,3,4,5,6,7,8,9")).toEqual(45);
         expect(stringCalculator.add("1,2,3,4")).toEqual(10);
     });
+
+    it('should support new line as a separator', function () {
+        expect(stringCalculator.add("1\n2,3")).toEqual(6);
+        expect(stringCalculator.add("1\n2,3\n4,5")).toEqual(15);
+    });
 })
